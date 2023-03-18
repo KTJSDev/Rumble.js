@@ -11,8 +11,7 @@ class TitanLoginMessage extends PiranhaMessage {
   }
 
   decode () {
-    console.log(this.readLong())
-    console.log(this.readString())
+
   }
 
   async process () {
