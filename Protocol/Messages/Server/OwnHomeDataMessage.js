@@ -10,7 +10,12 @@ class OwnHomeDataMessage extends PiranhaMessage {
 
   async encode () {
         this.writeVInt(1)
-        this.writeHex(`00007f6368e07a00000001002b842d`) // Timers
+        this.writeHex(`00007f6368e07a000000`) // Timers
+        //this.writeHex(`01002b842d`)
+        this.writeVInt(1)
+        this.writeVInt(0)
+        this.writeVInt(43)
+        this.writeVInt(2884)
         this.writeString(`2v2 - Triple Energy Rush - 20W - El Dorado - Event Chest`)
         this.writeHex(`02809df3b50cbcd4fdb50c80d7e8b50c0000000000000000`)
         this.writeString(`2v2 - Triple Energy Rush - 20W - El Dorado - Event Chest`)
@@ -172,13 +177,69 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(1)
         this.writeVInt(0)
         this.writeBoolean(false)
-        this.writeHex(`f0 fd 86 ad 09 06 02 00 00 00 7f 7f 00 00 a4 85 52 a4 85 52 bf 8e cb b6 0c 02 08 bd ea d7 06 00 b4 2d 84 b8 c2 b6 0c 84 b5 d7 b6 0c 00 01 00 7f 00 00`)
+        this.writeHex("f0 fd 86 ad 09")
+        this.writeVInt(6)
+        this.writeVInt(2)
+        this.writeVInt(0)
+        this.writeVInt(0)
+        this.writeVInt(0)
+        this.writeBoolean(true)
+        this.writeHex(`7f`)
+        this.writeVInt(0) 
+        this.writeVInt(0) 
+        this.writeVInt(672100)
+        this.writeVInt(672100)
+        this.writeVInt(1667851199)
+        this.writeVInt(2)
+        this.writeVInt(8) 
+        this.writeVInt(7011005) 
+       
+        this.writeVInt(0)
+        this.writeVInt(2932)
+        this.writeVInt(1667780100)
+        this.writeVInt(1667951940)
+        this.writeVInt(0)
+        this.writeVInt(1)
+        this.writeVInt(0)
+        this.writeBoolean(false)
+        this.writeVInt(0)
+        this.writeVInt(0)
         this.writeString(`chronos-special-offer-glory-3`)
-        this.writeHex(`3d bd ea d7 06 bd ea d7 06 bd ea d7 06 bd ea d7 06 bd ea d7 06 bd ea d7 06 bd ea d7 06 bf ea d7 06 bf ea d7 06 bf ea d7 06 82 eb d7 06 7f 7f 7f 7f 87 eb d7 06 7f 7f 7f 7f 8c eb d7 06 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f aa eb d7 06 7f 7f 7f 7f 7f 7f 7f 7f 7f b4 eb d7 06 07 32 07 01 01 00 00 00 00 98 fd c6 b6 0c ba 81 c7 b6 0c 00 00 af 1b 00 7f 00 7f 7f 00 00`)
+        this.writeVInt(61)
+        this.writeVInt(7011005)
+        this.writeVInt(7011005)
+        this.writeVInt(7011005)
+        this.writeVInt(7011005)
+        this.writeVInt(7011005)
+        this.writeVInt(7011005)
+        this.writeVInt(7011005)
+        this.writeVInt(7011007)
+        this.writeVInt(7011007)
+        this.writeVInt(7011007)
+        this.writeVInt(7011010)
+        this.writeHex(`7f 7f 7f 7f`)
+        this.writeVInt(7011015)
+        this.writeHex(`7f 7f 7f 7f`) 
+        this.writeVInt(7011020)
+        this.writeHex(`7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f`)  
+        this.writeVInt(7011050)
+        this.writeHex(`7f 7f 7f 7f 7f 7f 7f 7f 7f`)
+        this.writeVInt(7011060)
+        this.writeVInt(7)
+        this.writeVInt(50)
+        this.writeVInt(7)
+        this.writeVInt(1)
+        this.writeVInt(1)
+        this.writeHex(`00 00 00 00`) 
+        this.writeVInt(1667817304)
+        this.writeVInt(1667817594)
+        this.writeHex(`00 00`) 
+        this.writeVInt(1775)
+        this.writeHex(`00 7f 00 7f 7f 00 00`)
         
         this.writeVInt(3) // Amount of Offers
-        this.writeVInt(5)
 
+        this.writeVInt(5) // ItemType
         this.writeVInt(0)
         this.writeVInt(0) // offerID
         this.writeHex(`af`)
@@ -189,8 +250,8 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(1) // ReceiveType (1 - Buy, 3 - Ads)
         this.writeVInt(777) // Amount of Gems
         this.writeBoolean(false) // Gotcha
-        this.writeVInt(1) // Unknown
 
+        this.writeVInt(1) // ItemType
         this.writeVInt(0)
         this.writeVInt(1) // offerID
         this.writeHex(`af`)
@@ -204,12 +265,12 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(1337) // Amount of cards
         this.writeHex(`0101a03а00`)
         this.writeBoolean(false) // Gotcha
-        this.writeVInt(1) // Unknown
-        
+
+        this.writeVInt(1) // ItemType
         this.writeVInt(0)
         this.writeVInt(2) // offerID
         this.writeHex(`af`)
-        this.writeVInt(27) // AvaiableToBuy (27 - Avaiable, idk why :upside_down:)
+        this.writeVInt(27)
         this.writeVInt(228) // Cost
         this.writeVInt(1)
         this.writeVInt(1)
@@ -219,10 +280,76 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeHex(`0000a03e00`)
         this.writeBoolean(false) // Gotcha
 
-        this.writeVInt(6)
-        this.writeVInt(7)
-        this.writeHex(`00 00 00 88 03 03 01 00 33 00 07 00 01 00 88 03 03 01 00 28 00 07 00 02 00 88 03 03 01 00 9e 01 00 07 00 03 00 88 03 03 01 00 0f 00 07 00 04 00 88 03 03 01 00 9b 01 00 07 00 05 00 88 03 03 01 00 14`)
-        this.writeHex(`0000007fff`)
+        this.writeVInt(6) // EmojiShop
+        
+        this.writeVInt(7) // ItemType
+        this.writeVInt(1)
+        this.writeVInt(0) // Offer ID
+        this.writeVInt(1)
+        this.writeVInt(1488) // Cost
+        this.writeVInt(3)
+        this.writeVInt(1)
+        this.writeVInt(0) // ReceiveType (1 - Buy, 3 - Ads)
+        this.writeVInt(51) // EmojiID
+        this.writeBoolean(false) // purchased
+
+        this.writeVInt(7) // ItemType
+        this.writeVInt(0)
+        this.writeVInt(1) // Offer ID
+        this.writeVInt(0)
+        this.writeVInt(666) // Cost
+        this.writeVInt(3) // Currency Type (0 - Coins, 1 - Gems)
+        this.writeVInt(1)
+        this.writeVInt(0) // ReceiveType (1 - Buy, 3 - Ads)
+        this.writeVInt(40) // EmojiID
+        this.writeBoolean(false) // purchased
+
+        this.writeVInt(7) // ItemType
+        this.writeVInt(0)
+        this.writeVInt(2) // Offer ID
+        this.writeVInt(0)
+        this.writeVInt(888) // Cost
+        this.writeVInt(3) // Currency Type (0 - Coins, 1 - Gems)
+        this.writeVInt(1)
+        this.writeVInt(0) // ReceiveType (1 - Buy, 3 - Ads)
+        this.writeVInt(94) // EmojiID
+        this.writeBoolean(false) // purchased
+
+        this.writeVInt(7) // ItemType
+        this.writeVInt(0) 
+        this.writeVInt(3)
+        this.writeVInt(0)
+        this.writeVInt(333) // Cost
+        this.writeVInt(3) // Currency Type (0 - Coins, 1 - Gems)
+        this.writeVInt(1)
+        this.writeVInt(0) // ReceiveType (1 - Buy, 3 - Ads)
+        this.writeVInt(15) // EmojiID
+        this.writeBoolean(false) // purchased
+
+        this.writeVInt(7) // ItemType
+        this.writeVInt(0)
+        this.writeVInt(4) // Offer ID
+        this.writeVInt(0)
+        this.writeVInt(5555) // Cost
+        this.writeVInt(3) // Currency Type (0 - Coins, 1 - Gems)
+        this.writeVInt(1)
+        this.writeVInt(0) // ReceiveType (1 - Buy, 3 - Ads)
+        this.writeVInt(91) // EmojiID
+        this.writeBoolean(false) // purchased
+
+        this.writeVInt(7) // ItemType
+        this.writeVInt(0)
+        this.writeVInt(5) // Offer ID
+        this.writeVInt(0)
+        this.writeVInt(228) // Cost
+        this.writeVInt(3) // Currency Type (0 - Coins, 1 - Gems)
+        this.writeVInt(1)
+        this.writeVInt(0) // ReceiveType (1 - Buy, 3 - Ads)
+        this.writeVInt(20) // EmojiID
+        this.writeBoolean(false) // purchased
+
+        this.writeHex(`00 00 7f ff`)
+        
         this.writeHex(`e49596ae04`)
         this.writeVInt(23) // level
         this.writeVInt(999999) 
@@ -231,8 +358,11 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(999999)
         this.writeVInt(999999)
         this.writeVInt(1337)
-
-        this.writeHex(`00007f7f00`)
+        this.writeVInt(999999)
+        this.writeVInt(2)
+        this.writeBoolean(true)
+        this.writeVInt(999999)
+        this.writeVInt(999999)
         
         this.writeHex(`80e4e2cd02`)
         this.writeVInt(23) // level
@@ -242,7 +372,12 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(999999)
         this.writeVInt(999999)
         this.writeVInt(1337)
-        this.writeHex(`00007f7f00`)
+        this.writeVInt(999999)
+        this.writeVInt(1)
+        this.writeBoolean(true)
+        this.writeVInt(999999)
+        this.writeVInt(999999)
+
         this.writeHex(`e3eff0be06`)
         this.writeVInt(19) // level
         this.writeVInt(999999) 
@@ -251,7 +386,12 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(999999)
         this.writeVInt(999999)
         this.writeVInt(1337)
-        this.writeHex(`00007f7f00`)
+        this.writeVInt(999999)
+        this.writeVInt(1)
+        this.writeBoolean(true)
+        this.writeVInt(999999)
+        this.writeVInt(999999)
+
         this.writeHex(`e2ad85ca0a`)
         this.writeVInt(23) // level
         this.writeVInt(999999) 
@@ -260,7 +400,12 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(999999)
         this.writeVInt(999999)
         this.writeVInt(1337)
-        this.writeHex(`00007f7f00`)
+        this.writeVInt(999999)
+        this.writeVInt(1)
+        this.writeBoolean(true)
+        this.writeVInt(999999)
+        this.writeVInt(999999)
+
         this.writeHex(`ed8cd39d08`)
         this.writeVInt(23) // level
         this.writeVInt(999999) 
@@ -269,7 +414,12 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(999999)
         this.writeVInt(999999)
         this.writeVInt(1337)
-        this.writeHex(`00007f7f00`)
+        this.writeVInt(999999)
+        this.writeVInt(1)
+        this.writeBoolean(true)
+        this.writeVInt(999999)
+        this.writeVInt(999999)
+
         this.writeHex(`9ad7f2ea0e`)
         this.writeVInt(23) // level
         this.writeVInt(999999) 
@@ -278,7 +428,12 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(999999)
         this.writeVInt(999999)
         this.writeVInt(1337)
-        this.writeHex(`00007f7f00`)
+        this.writeVInt(999999)
+        this.writeVInt(1)
+        this.writeBoolean(true)
+        this.writeVInt(999999)
+        this.writeVInt(999999)
+
         this.writeHex(`f0ae96d403`)
         this.writeVInt(23) // level
         this.writeHex(`009c97c11a`)
@@ -286,7 +441,12 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(999999)
         this.writeVInt(999999)
         this.writeVInt(1337)
-        this.writeHex(`00007f7f00`)
+        this.writeVInt(999999)
+        this.writeVInt(1)
+        this.writeBoolean(true)
+        this.writeVInt(999999)
+        this.writeVInt(999999)
+
         this.writeHex(`8bb39f9903`)
         this.writeVInt(7) // level
         this.writeHex(`009d97c11a`)
@@ -294,8 +454,13 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(999999)
         this.writeVInt(999999)
         this.writeVInt(1337)
-        this.writeHex(`00007f7f00`)
-        this.writeHex(`000007000004010103000000000024b8a11a80af1a80aac8b60c06060000000000007f7f0000007f00000000809423809423bae2c8b60c01020200000000000002027f0000000000007f090000007f007f7f007f00000000007f01303000000000000003187f000000000002010100010000000005050600000000beffc6b60c020100000000000005040600000000affec6b60c00020102`)
+        this.writeVInt(999999)
+        this.writeVInt(1)
+        this.writeBoolean(true)
+        this.writeVInt(999999)
+        this.writeVInt(999999)
+
+        this.writeHex(`00 00 07 00 00 04 01 01 03 00 00 00 00 00 24 b8 a1 1a 80 af 1a 80 aa c8 b6 0c 06 06 00 00 00 00 00 00 7f 7f 00 00 00 7f 00 00 00 00 80 94 23 80 94 23 ba e2 c8 b6 0c 01 02 02 00 00 00 00 00 00 02 02 7f 00 00 00 00 00 00 7f 09 00 00 00 7f 00 7f 7f 00 7f 00 00 00 00 00 7f 01 30 30 00 00 00 00 00 00 03 18 7f 00 00 00 00 00 02 01 01 00 01 00 00 00 00 05 05 06 00 00 00 00 be ff c6 b6 0c 02 01 00 00 00 00 00 00 05 04 06 00 00 00 00 af fe c6 b6 0c 00 02 01 02`)
         this.writeHex(`8bb39f9903`)
         this.writeVInt(1)
         this.writeHex(`009d97c11a`)
@@ -306,9 +471,18 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeHex(`009d97c11a`)
         this.writeVInt(1)
         this.writeHex(`00000000007f7f000f`)
-        this.writeHex(`0a7f7f7f7f0101f0ae96d40300009c97c11a0100000000007f7f000f0a7f7f7f7f00007f88883280de3494c2c9b60c00007f020000000000007f00000000000000007f00bf2e0000bf2e000000000000000000000000000000000000007f007f7f000100e4ebaeaa02000a7f89d4bf9f0a010103060205a9d199ff04000100a9d199ff040101030100a4010302f5dcc8df02000101f3a8a79e020101030100060291ebdbbf0d000101ac85acf60b01010301000504f8b5c88206000104f8b5c8820601010301000000f0fd86ad090001017f7f7f7f7f1daef4d6a401acf9d39f07cfbfddc60389cf8c920eeca0a8a604bf88e1e00db9a4aecd03b8cfdeaf03f6a2fff507c2a2e69d029abef8e40cf6dfc8a901bdbddfd107c4c2afdf0c9dffd0c607b3daa1e808dcb2aaa70ad289c2ce05a3bdebf907c889ddcf0d8cc5ffe90db2eaa28d0bd2b4aea709e7ce92a705fdcdc5b2059b8184b50aca9eb2880b8fc1bbce03f39781960c1d80dfc3940c80dfc3940c8095f4970c80bd9b9a0c80e5c29c0c808dea9e0c8091d2a00c80b591a10c80ddb8a30c80ddb8a30c808583ab0c809dadab0c80b5d7ab0c80cd81ac0c809fa1ac0c80b7cbac0c80cff5ac0c90cda4b10c809df3b50c80edc1ba0c80bd90bf0c808ddfc30c80d198c80c80a1e7cc0c80f1b5d10c80c184d60c8091d3da0c80e1a1df0c80b1f0e30c92033031323334353c3d3e3f80018101820183018401850186018701880189018a018b018c018d018e018f019001910192019301940195019601970198019901a001a101a201a301a401a501a601a701a801a901aa01ab01ac01ad01ae01af01b001b101b201b301b401b501b601b701b801b901ba01bb01bc01bd018402850286028702880289028a028b028c028d028e028f0290029102920293029402950296029702980299029a029b029c029d029e029f02a002a102a201a302a402a502a602a702a802a902aa02ab02ac02ad02ae02af02b002b102b202b302b402b502b602b702b802b902ba02bb02bc02bd02be02bf0280038103820383038403850386038703880389038a038b038c038d038e038f0390039103920393039403950396039703980399039a039b039c039d039e039f03a003a103a203a303a403a503a603a703a803a903aa03ab03ac03ad03ae03af03b003b103b203b303b403b503b603b703b803b903ba03bb03bc03bd03be03bf0380048104820483048404850486048704880489048a048b048c048d048e048f049004910492049304920380a988b60c80a988b60c80a988b60c80a988b60c80a988b60c80a988b60c80ddc4b80c80ddc4b80c80ddc4b80c80ddc4b80c80ddc4b80c80ddc4b80c80d78bbb0c80d78bbb0c80d78bbb0c80d78bbb0c80d78bbb0c80d78bbb0c80d1d2bd0c80d1d2bd0c80d1d2bd0c80d1d2bd0c80d1d2bd0c80d1d2bd0c80f9f9bf0c80f9f9bf0c80f9f9bf0c80f9f9bf0c80f9f9bf0c80f9f9bf0c80c3c0c20c80f3c0c20c80f3c0c20c80f3c0c20c80f3c0c20c80f3c0c20c80a7fdc40c80a7fdc40c80a7fdc40c80a7fdc40c80a7fdc40c80a7fdc40c80a1c4c70c80a1c4c70c80a1c4c70c80a1c4c70c80a1c4c70c80a1c4c70c80d580ca0c80d580ca0c80d580ca0c80d580ca0c80d580ca0c80d580ca0c80cfc7cc0c80cfc7cc0c80cfc7cc0c80cfc7cc0c80cfc7cc0c80cfc7cc0c80c98ecf0c80c98ecf0c80c98ecf0c80c98ecf0c80c98ecf0c80c98ecf0c80fdcad10c80fdcad10c80fdcad10c80fdcad10c80fdcad10c80fdcad10c80f791d40c80f791d40c80f791d40c80f791d40c80f791d40c80f791d40c80abced60c80abced60c80abced60c80abced60c80abced60c80abced60c80a595d90c80a595d90c80a595d90c80a595d90c80a595d90c80a595d90c809fdcdb0c809fdcdb0c809fdcdb0c809fdcdb0c809fdcdb0c809fdcdb0c808d8ede0c808d8ede0c808d8ede0c808d8ede0c808d8ede0c808d8ede0c8087d5e00c8087d5e00c8087d5e00c8087d5e00c8087d5e00c8087d5e00c80bb91e30c80bb91e30c80bb91e30c80bb91e30c80bb91e30c80bb91e30c80b5d8e50c80b5d8e50c80b5d8e50c80b5d8e50c80b5d8e50c80b5d8e50c80e994e80c80e994e80c80e994e80c80e994e80c80e994e80c80e994e80c80e3dbea0c80e3dbea0c80e3dbea0c80e3dbea0c80e3dbea0c80e3dbea0c80dda2ed0c80dda2ed0c80dda2ed0c80dda2ed0c80dda2ed0c80dda2ed0c8091dfef0c8091dfef0c8091dfef0c8091dfef0c8091dfef0c8091dfef0c808ba6f20c808ba6f20c808ba6f20c808ba6f20c808ba6f20c808ba6f20c80bfe2f40c80bfe2f40c80bfe2f40c80bfe2f40c80bfe2f40c80bfe2f40c80b9a9f70c80b9a9f70c80b9a9f70c80b9a9f70c80b9a9f70c80b9a9f70c80b3f0f90c80b3f0f90c80b3f0f90c80b3f0f90c80b3f0f90c80b3f0f90c80db97fc0c80db97fc0c80db97fc0c80db97fc0c80db97fc0c80db97fc0c80d5defe0c80d5defe0c80d5defe0c80d5defe0c80d5defe0c80d5defe0c80899b810d80899b810d80899b810d80899b810d80899b810d80899b810d8083e2830d8083e2830d8083e2830d8083e2830d8083e2830d8083e2830d80b79e860d80b79e860d80b79e860d80b79e860d80b79e860d80b79e860d80b1e5880d80b1e5880d80b1e5880d80b1e5880d80b1e5880d80b1e5880d80abac8b0d80abac8b0d80abac8b0d80abac8b0d80abac8b0d80abac8b0d000000000000000000000000000000aa2e00007f0000000000000000000002000000000f00000000000200000000000000000000982e982e00000a7f7f7f7f7f7f7f7f7f7f017f01007f000001017f000001027f000001037f000001047f000001057f0000020101000204000102b9d5a00302b9d5a00302b9d5a003`)
+        this.writeVInt(10)
+        this.writeHex(`7f 7f 7f 7f 01 01 f0 ae 96 d4 03 00 00 9c 97 c1 1a 01 00 00 00 00 00 7f 7f 00 0f 0a 7f 7f 7f 7f 00 00 7f 88 88 32 80 de 34 94 c2 c9 b6 0c 00 00 7f 02 00 00 00 00 00 00 7f 00 00 00 00 00 00 00 00 7f 00 bf 2e 00 00 bf 2e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7f 00 7f 7f 00 01 00 e4 eb ae aa 02 00 0a 7f 89 d4 bf 9f 0a 01 01 03 06 02 05 a9 d1 99 ff 04 00 01 00 a9 d1 99 ff 04 01 01 03 01 00 a4 01 03 02 f5 dc c8 df 02 00 01 01 f3 a8 a7 9e 02 01 01 03 01 00 06 02 91 eb db bf 0d 00 01 01 ac 85 ac f6 0b 01 01 03 01 00 05 04 f8 b5 c8 82 06 00 01 04 f8 b5 c8 82 06 01 01 03 01 00 00 00 f0 fd 86 ad 09 00 01 01 7f 7f 7f 7f 7f 1d ae f4 d6 a4 01 ac f9 d3 9f 07 cf bf dd c6 03 89 cf 8c 92 0e ec a0 a8 a6 04 bf 88 e1 e0 0d b9 a4 ae cd 03 b8 cf de af 03 f6 a2 ff f5 07 c2 a2 e6 9d 02 9a be f8 e4 0c f6 df c8 a9 01 bd bd df d1 07 c4 c2 af df 0c 9d ff d0 c6 07 b3 da a1 e8 08 dc b2 aa a7 0a d2 89 c2 ce 05 a3 bd eb f9 07 c8 89 dd cf 0d 8c c5 ff e9 0d b2 ea a2 8d 0b d2 b4 ae a7 09 e7 ce 92 a7 05 fd cd c5 b2 05 9b 81 84 b5 0a ca 9e b2 88 0b 8f c1 bb ce 03 f3 97 81 96 0c`)
+        this.writeVInt(29)
+        this.writeVInt(1632139200)
+        this.writeVInt(1632139200)
+        this.writeHex(`80 95 f4 97 0c 80 bd 9b 9a 0c 80 e5 c2 9c 0c 80 8d ea 9e 0c 80 91 d2 a0 0c 80 b5 91 a1 0c 80 dd b8 a3 0c 80 dd b8 a3 0c 80 85 83 ab 0c 80 9d ad ab 0c 80 b5 d7 ab 0c 80 cd 81 ac 0c 80 9f a1 ac 0c 80 b7 cb ac 0c 80 cf f5 ac 0c 90 cd a4 b1 0c 80 9d f3 b5 0c 80 ed c1 ba 0c 80 bd 90 bf 0c 80 8d df c3 0c 80 d1 98 c8 0c 80 a1 e7 cc 0c 80 f1 b5 d1 0c 80 c1 84 d6 0c 80 91 d3 da 0c 80 e1 a1 df 0c 80 b1 f0 e3 0c 92 03 30 31 32 33 34 35 3c 3d 3e 3f 80 01 81 01 82 01 83 01 84 01 85 01 86 01 87 01 88 01 89 01 8a 01 8b 01 8c 01 8d 01 8e 01 8f 01 90 01 91 01 92 01 93 01 94 01 95 01 96 01 97 01 98 01 99 01 a0 01 a1 01 a2 01 a3 01 a4 01 a5 01 a6 01 a7 01 a8 01 a9 01 aa 01 ab 01 ac 01 ad 01 ae 01 af 01 b0 01 b1 01 b2 01 b3 01 b4 01 b5 01 b6 01 b7 01 b8 01 b9 01 ba 01 bb 01 bc 01 bd 01 84 02 85 02 86 02 87 02 88 02 89 02 8a 02 8b 02 8c 02 8d 02 8e 02 8f 02 90 02 91 02 92 02 93 02 94 02 95 02 96 02 97 02 98 02 99 02 9a 02 9b 02 9c 02 9d 02 9e 02 9f 02 a0 02 a1 02 a2 01 a3 02 a4 02 a5 02 a6 02 a7 02 a8 02 a9 02 aa 02 ab 02 ac 02 ad 02 ae 02 af 02 b0 02 b1 02 b2 02 b3 02 b4 02 b5 02 b6 02 b7 02 b8 02 b9 02 ba 02 bb 02 bc 02 bd 02 be 02 bf 02 80 03 81 03 82 03 83 03 84 03 85 03 86 03 87 03 88 03 89 03 8a 03 8b 03 8c 03 8d 03 8e 03 8f 03 90 03 91 03 92 03 93 03 94 03 95 03 96 03 97 03 98 03 99 03 9a 03 9b 03 9c 03 9d 03 9e 03 9f 03 a0 03 a1 03 a2 03 a3 03 a4 03 a5 03 a6 03 a7 03 a8 03 a9 03 aa 03 ab 03 ac 03 ad 03 ae 03 af 03 b0 03 b1 03 b2 03 b3 03 b4 03 b5 03 b6 03 b7 03 b8 03 b9 03 ba 03 bb 03 bc 03 bd 03 be 03 bf 03 80 04 81 04 82 04 83 04 84 04 85 04 86 04 87 04 88 04 89 04 8a 04 8b 04 8c 04 8d 04 8e 04 8f 04 90 04 91 04 92 04 93 04 92 03 80 a9 88 b6 0c 80 a9 88 b6 0c 80 a9 88 b6 0c 80 a9 88 b6 0c 80 a9 88 b6 0c 80 a9 88 b6 0c 80 dd c4 b8 0c 80 dd c4 b8 0c 80 dd c4 b8 0c 80 dd c4 b8 0c 80 dd c4 b8 0c 80 dd c4 b8 0c 80 d7 8b bb 0c 80 d7 8b bb 0c 80 d7 8b bb 0c 80 d7 8b bb 0c 80 d7 8b bb 0c 80 d7 8b bb 0c 80 d1 d2 bd 0c 80 d1 d2 bd 0c 80 d1 d2 bd 0c 80 d1 d2 bd 0c 80 d1 d2 bd 0c 80 d1 d2 bd 0c 80 f9 f9 bf 0c 80 f9 f9 bf 0c 80 f9 f9 bf 0c 80 f9 f9 bf 0c 80 f9 f9 bf 0c 80 f9 f9 bf 0c 80 c3 c0 c2 0c 80 f3 c0 c2 0c 80 f3 c0 c2 0c 80 f3 c0 c2 0c 80 f3 c0 c2 0c 80 f3 c0 c2 0c 80 a7 fd c4 0c 80 a7 fd c4 0c 80 a7 fd c4 0c 80 a7 fd c4 0c 80 a7 fd c4 0c 80 a7 fd c4 0c 80 a1 c4 c7 0c 80 a1 c4 c7 0c 80 a1 c4 c7 0c 80 a1 c4 c7 0c 80 a1 c4 c7 0c 80 a1 c4 c7 0c 80 d5 80 ca 0c 80 d5 80 ca 0c 80 d5 80 ca 0c 80 d5 80 ca 0c 80 d5 80 ca 0c 80 d5 80 ca 0c 80 cf c7 cc 0c 80 cf c7 cc 0c 80 cf c7 cc 0c 80 cf c7 cc 0c 80 cf c7 cc 0c 80 cf c7 cc 0c 80 c9 8e cf 0c 80 c9 8e cf 0c 80 c9 8e cf 0c 80 c9 8e cf 0c 80 c9 8e cf 0c 80 c9 8e cf 0c 80 fd ca d1 0c 80 fd ca d1 0c 80 fd ca d1 0c 80 fd ca d1 0c 80 fd ca d1 0c 80 fd ca d1 0c 80 f7 91 d4 0c 80 f7 91 d4 0c 80 f7 91 d4 0c 80 f7 91 d4 0c 80 f7 91 d4 0c 80 f7 91 d4 0c 80 ab ce d6 0c 80 ab ce d6 0c 80 ab ce d6 0c 80 ab ce d6 0c 80 ab ce d6 0c 80 ab ce d6 0c 80 a5 95 d9 0c 80 a5 95 d9 0c 80 a5 95 d9 0c 80 a5 95 d9 0c 80 a5 95 d9 0c 80 a5 95 d9 0c 80 9f dc db 0c 80 9f dc db 0c 80 9f dc db 0c 80 9f dc db 0c 80 9f dc db 0c 80 9f dc db 0c 80 8d 8e de 0c 80 8d 8e de 0c 80 8d 8e de 0c 80 8d 8e de 0c 80 8d 8e de 0c 80 8d 8e de 0c 80 87 d5 e0 0c 80 87 d5 e0 0c 80 87 d5 e0 0c 80 87 d5 e0 0c 80 87 d5 e0 0c 80 87 d5 e0 0c 80 bb 91 e3 0c 80 bb 91 e3 0c 80 bb 91 e3 0c 80 bb 91 e3 0c 80 bb 91 e3 0c 80 bb 91 e3 0c 80 b5 d8 e5 0c 80 b5 d8 e5 0c 80 b5 d8 e5 0c 80 b5 d8 e5 0c 80 b5 d8 e5 0c 80 b5 d8 e5 0c 80 e9 94 e8 0c 80 e9 94 e8 0c 80 e9 94 e8 0c 80 e9 94 e8 0c 80 e9 94 e8 0c 80 e9 94 e8 0c 80 e3 db ea 0c 80 e3 db ea 0c 80 e3 db ea 0c 80 e3 db ea 0c 80 e3 db ea 0c 80 e3 db ea 0c 80 dd a2 ed 0c 80 dd a2 ed 0c 80 dd a2 ed 0c 80 dd a2 ed 0c 80 dd a2 ed 0c 80 dd a2 ed 0c 80 91 df ef 0c 80 91 df ef 0c 80 91 df ef 0c 80 91 df ef 0c 80 91 df ef 0c 80 91 df ef 0c 80 8b a6 f2 0c 80 8b a6 f2 0c 80 8b a6 f2 0c 80 8b a6 f2 0c 80 8b a6 f2 0c 80 8b a6 f2 0c 80 bf e2 f4 0c 80 bf e2 f4 0c 80 bf e2 f4 0c 80 bf e2 f4 0c 80 bf e2 f4 0c 80 bf e2 f4 0c 80 b9 a9 f7 0c 80 b9 a9 f7 0c 80 b9 a9 f7 0c 80 b9 a9 f7 0c 80 b9 a9 f7 0c 80 b9 a9 f7 0c 80 b3 f0 f9 0c 80 b3 f0 f9 0c 80 b3 f0 f9 0c 80 b3 f0 f9 0c 80 b3 f0 f9 0c 80 b3 f0 f9 0c 80 db 97 fc 0c 80 db 97 fc 0c 80 db 97 fc 0c 80 db 97 fc 0c 80 db 97 fc 0c 80 db 97 fc 0c 80 d5 de fe 0c 80 d5 de fe 0c 80 d5 de fe 0c 80 d5 de fe 0c 80 d5 de fe 0c 80 d5 de fe 0c 80 89 9b 81 0d 80 89 9b 81 0d 80 89 9b 81 0d 80 89 9b 81 0d 80 89 9b 81 0d 80 89 9b 81 0d 80 83 e2 83 0d 80 83 e2 83 0d 80 83 e2 83 0d 80 83 e2 83 0d 80 83 e2 83 0d 80 83 e2 83 0d 80 b7 9e 86 0d 80 b7 9e 86 0d 80 b7 9e 86 0d 80 b7 9e 86 0d 80 b7 9e 86 0d 80 b7 9e 86 0d 80 b1 e5 88 0d 80 b1 e5 88 0d 80 b1 e5 88 0d 80 b1 e5 88 0d 80 b1 e5 88 0d 80 b1 e5 88 0d 80 ab ac 8b 0d 80 ab ac 8b 0d 80 ab ac 8b 0d 80 ab ac 8b 0d 80 ab ac 8b 0d 80 ab ac 8b 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 aa 2e 00 00 7f 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 0f 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 98 2e 98 2e 00 00 0a 7f 7f 7f 7f 7f 7f 7f 7f 7f 7f 01 7f 01 00 7f 00 00 01 01 7f 00 00 01 02 7f 00 00 01 03 7f 00 00 01 04 7f 00 00 01 05 7f 00 00 02 01 01 00 02 04 00 01 02 b9 d5 a0 03 02 b9 d5 a0 03 02 b9 d5 a0 03`)
         this.writeString("KTJS") // Name
-        this.writeHex(`00000002525500acb9c7b60cb2f0c6b60c`)
+        this.writeVInt(0)
+        this.writeVInt(0)
+        this.writeVInt(0)
+        this.writeVInt(2)
+        this.writeHex(`525500acb9c7b60cb2f0c6b60c`)
         this.writeVInt(1)
         this.writeVInt(999999) //trophies
         this.writeHex(`0000000000000000`)
@@ -344,28 +518,28 @@ class OwnHomeDataMessage extends PiranhaMessage {
         this.writeVInt(999999) // Wins with 3 goals
         this.writeVInt(0)
         this.writeVInt(0)
-        this.writeVInt(999999)
         this.writeVInt(999999) // gems
-        this.writeVInt(999999) // gems
+        this.writeVInt(0) 
+        this.writeVInt(0)
         this.writeVInt(999999) // XP
         this.writeVInt(999999) // Level
-        this.writeVInt(999999)
-
-        this.writeBoolean(false) // Chest
-        this.writeVInt(999999)
-        this.writeVInt(999999)
-        this.writeVInt(999999) // Wins
-        this.writeVInt(1)
         this.writeVInt(2)
+
+        this.writeVInt(2) // Chest
+        this.writeVInt(1)
         this.writeVInt(3)
-        this.writeVInt(4)
-        this.writeVInt(5)
-        this.writeVInt(6)
+        this.writeVInt(999999) // Wins
+        this.writeVInt(3)
+        this.writeVInt(0)
+        this.writeVInt(0)
+        this.writeVInt(0)
+        this.writeVInt(0)
+        this.writeVInt(0)
         this.writeBoolean(true)
         this.writeBoolean(true)
         this.writeBoolean(true)
         this.writeBoolean(true)
-        this.writeBoolean(true)
+        //this.writeBoolean(true)
         this.writeHex(`b2f0c6b60c8cf6e69a`)
         this.writeVInt(10)
   }
