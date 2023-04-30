@@ -44,7 +44,6 @@ class TitanLoginMessage extends PiranhaMessage {
   }
 
   async process () {
-    console.log(this.lowID)
     await new LoginOKMessage(this.client, this.lowID[1], this.token).send()
     await new OwnHomeDataMessage(this.client).send()
   }
