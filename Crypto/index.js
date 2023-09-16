@@ -1,24 +1,24 @@
-const crypto = require('crypto');
+const RC4 = require('simple-rc4');
 
-class CryptoRc4 {
+class CryptoRC4 {
   constructor() {
       this.key = Buffer.from('FROGMINDTODO');
       this.nonce = Buffer.from('nonce');
-      this.RC4_Stream = crypto.createCipheriv('rc4', Buffer.concat([this.key, this.nonce]), '');
-      this.RC4_Stream.update(Buffer.concat([this.key, this.nonce]));
-      this.RC4_Stream2 = crypto.createCipheriv('rc4', Buffer.concat([this.key, this.nonce]), '');
-      this.RC4_Stream2.update(Buffer.concat([this.key, this.nonce]));
+      this.encryptStream = new RC4(Buffer.concat([this.key, this.nonce]));
+      this.encryptStream.update(Buffer.concat([this.key, this.nonce]));
+      this.decryptStream =  new RC4(Buffer.concat([this.key, this.nonce]));
+      this.decryptStream.update(Buffer.concat([this.key, this.nonce]));
   }
 
   decrypt(data) {
-      const decryptedData = this.RC4_Stream.update(data);
+      const decryptedData = this.decryptStream.update(data);
       return decryptedData;
   }
 
   encrypt(data) {
-      const encryptedData = this.RC4_Stream2.update(data);
+      const encryptedData = this.encryptStream.update(data);
       return encryptedData;
   }
 }
 
-module.exports = CryptoRc4
+module.exports = CryptoRC4

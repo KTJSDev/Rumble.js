@@ -23,7 +23,9 @@ server.on('connection', async (client) => {
       payload: packet.slice(7),
       client,
     }
+
     message.payload = client.crypto.decrypt(message.payload)
+
     if (packets.indexOf(String(message.id)) !== -1) {
       try {
         const packet = new (Messages.handle(message.id))(client, message.payload)
