@@ -24,7 +24,7 @@ This server made by
 * [Kitenok](https://github.com/kitenokgene)
 * [tailsjs](https://github.com/tailsjs)
 
-Check out our [Discord Server](https://discord.gg/uV46YKbU5R) for more info and news about server!
+Check out our [Discord Server](https://discord.gg/uV46YKbU5R) and [Telegram Channel](https://t.me/KTJS_re) for more info and news about server!
 
 [Wiki](https://github.com/KTJS-TEAM/FrogmindRumble-Server/wiki)
 
