@@ -12,6 +12,7 @@ class LoginOKMessage extends PiranhaMessage {
   }
 
   encode () {
+    this.writeBoolean(true)
     this.writeLong(0, this.lowID) //accountid
     this.writeLong(0, this.lowID) //homeid
     this.writeString(this.token) //token

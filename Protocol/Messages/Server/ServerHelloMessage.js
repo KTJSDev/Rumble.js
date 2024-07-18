@@ -9,6 +9,7 @@ class ServerHelloMessage extends PiranhaMessage {
   }
 
   encode () {
+    this.writeBoolean(true)
     this.writeInt(24)
     for (let i = 0; i < 24; i++)
     { this.writeByte(1) }

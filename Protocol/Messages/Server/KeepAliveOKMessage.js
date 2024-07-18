@@ -9,6 +9,7 @@ class KeepAliveOKMessage extends PiranhaMessage {
   }
 
   encode () {
+    this.writeBoolean(true)
     this.writeInt(1)
   }
 }
