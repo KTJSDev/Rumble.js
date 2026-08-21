@@ -2,6 +2,7 @@ import { MessageQueue } from '../messaging/MessageQueue.js'
 import { LogicHyperionMessageFactory } from '../../logic/message/LogicHyperionMessageFactory.js'
 import { RC4Encrypter } from "../../titan/security/encryption/RC4Encrypter.js"
 import { MessageManager } from "../messaging/MessageManager.js"
+import { AvailableServerCommandMessage } from '../../logic/message/home/AvailableServerCommandMessage.js'
 
 export class Session {
     constructor(socket) {
@@ -73,5 +74,11 @@ export class Session {
 
         this.socket.write(Buffer.concat([header, buffer]))
         console.log("Sent message with type", message.getMessageType())
+    }
+
+    addCommand(command) {
+        const availableServerCommand = new AvailableServerCommandMessage()
+        availableServerCommand.command = command
+        this.sendMessage(availableServerCommand)
     }
 }

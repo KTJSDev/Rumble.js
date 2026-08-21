@@ -5,8 +5,7 @@ export class LogicGlobalEvent {
         stream.writeVInt(-1)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
-
-        // VintArr 1
+        // VintArr 0
         stream.writeVInt(29)
         stream.writeVInt(172678446)
         stream.writeVInt(972717676)
@@ -38,7 +37,7 @@ export class LogicGlobalEvent {
         stream.writeVInt(484929615)
         stream.writeVInt(-513792525)
 
-        // VintArr 2
+        // VintArr 1
         stream.writeVInt(29)
         stream.writeVInt(1632139200)
         stream.writeVInt(1632139200)
@@ -70,7 +69,7 @@ export class LogicGlobalEvent {
         stream.writeVInt(1710504000)
         stream.writeVInt(1715342400)
 
-        // VintArr 3
+        // VintArr 2
         stream.writeVInt(210)
         stream.writeVInt(48)
         stream.writeVInt(49)
@@ -283,7 +282,7 @@ export class LogicGlobalEvent {
         stream.writeVInt(274)
         stream.writeVInt(275)
 
-        // VintArr 4
+        // VintArr 3
         stream.writeVInt(210)
         stream.writeVInt(1667304000)
         stream.writeVInt(1667304000)
@@ -496,6 +495,9 @@ export class LogicGlobalEvent {
         stream.writeVInt(1756728000)
         stream.writeVInt(1756728000)
 
+        // VintArr 4
+        stream.writeVInt(0)
+
         // VintArr 5
         stream.writeVInt(0)
 
@@ -511,8 +513,10 @@ export class LogicGlobalEvent {
         // VintArr 9
         stream.writeVInt(0)
 
-        // VintArr 10
+        stream.writeVInt(7171)
         stream.writeVInt(0)
-
+        stream.writeVInt(70001) // current battlepass season
+        stream.writeVInt(0)
+        stream.writeVInt(0)
     }
 }

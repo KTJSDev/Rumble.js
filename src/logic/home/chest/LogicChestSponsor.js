@@ -6,7 +6,6 @@ export class LogicChestSponsor {
         stream.writeVInt(0)
         stream.writeVInt(0)
         stream.writeVInt(-1)
-        
         stream.writeBoolean(true)
         // LogicChest
         stream.writeVInt(48)
@@ -24,7 +23,7 @@ export class LogicChestSponsor {
 
         stream.writeBoolean(false)
 
-        stream.writeVInt(4)
+        stream.writeVInt(3)
         stream.writeVInt(24)
         stream.writeVInt(-1)
         stream.writeVInt(0)

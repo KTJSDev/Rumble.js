@@ -2,6 +2,8 @@ import { LoginOkMessage } from "../../logic/message/auth/LoginOkMessage.js";
 import { OwnHomeDataMessage } from "../../logic/message/home/OwnHomeDataMessage.js";
 import { KeepAliveOkMessage } from "../../logic/message/auth/KeepAliveOkMessage.js";
 import { LogicLong } from "../../titan/logic/LogicLong.js";
+import { LogicCommandFactory } from "../../logic/command/LogicCommandFactory.js";
+import { ByteStream } from "../../titan/stream/ByteStream.js";
 
 export class MessageManager {
     constructor(session) {
@@ -14,6 +16,8 @@ export class MessageManager {
                 this.onLoginReceived(message); break;
             case 10108:
                 this.onKeepAliveReceived(message); break;
+            case 14102:
+                this.onEndClientTurnReceived(message); break;
         }
     }
 
@@ -34,5 +38,19 @@ export class MessageManager {
 
     onKeepAliveReceived(message) {
         this.sendMessage(new KeepAliveOkMessage())
+    }
+
+    onEndClientTurnReceived(message) {
+        for (const rawCommand of message.commands) {
+            const command = LogicCommandFactory.createCommandByType(rawCommand.commandType)
+            const commandStream = new ByteStream(rawCommand.bytes)
+
+            if (command.getCommandType() === 0) {
+                console.warn("Unknown command with type", rawCommand.commandType, "received!")
+            }
+
+            command.decode(commandStream)
+            command.execute(this.session)
+        }   
     }
 }

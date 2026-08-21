@@ -4,114 +4,67 @@ export class LogicShop {
         stream.writeVInt(1)
         stream.writeVInt(0)
         stream.writeBoolean(false)
-        stream.writeVInt(-1545866455)
-        stream.writeVInt(17)
-        stream.writeVInt(7)
+        stream.writeVInt(-1523313112)
+        stream.writeVInt(30)
+        stream.writeVInt(5)
         stream.writeVInt(0)
         stream.writeVInt(0)
-        stream.writeVInt(0)
+        stream.writeVInt(6943)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
         stream.writeVInt(0)
         stream.writeVInt(0)
 
         // LogicTimer
-        stream.writeVInt(1714580)
-        stream.writeVInt(1714580)
-        stream.writeVInt(1780783199)
+        stream.writeVInt(185600)
+        stream.writeVInt(185600)
+        stream.writeVInt(1787263199)
 
-        // LogicShopItemInfo 1
         stream.writeBoolean(false)
 
-        // LogicShopItemInfo 2
         stream.writeBoolean(true)
         stream.writeVInt(8)
 
-
         // LogicShopItemInfo
-        stream.writeVInt(7003010)
+        stream.writeVInt(7001001)
         stream.writeVInt(0)
-        stream.writeVInt(6941)
-        stream.writeVInt(1780618500)
-        stream.writeVInt(1780790340)
+        stream.writeVInt(7154)
+        stream.writeVInt(1787184900)
+        stream.writeVInt(1787356740)
         stream.writeVInt(0)
         stream.writeVInt(1)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
-
-
-        // VIntArr 1
+        // LogicShopItemInfoSpecialOfferChronos
         stream.writeVInt(-1)
+        stream.writeVInt(0)
+        stream.writeVInt(0)
+        stream.writeStringReference('chronos-special-offer-goldrush-2')
 
-        stream.writeVInt(0)
-        stream.writeVInt(0)
-        stream.writeBoolean(false)
-        stream.writeBoolean(false)
-        stream.writeBoolean(false)
-        stream.writeBoolean(false)
-        stream.writeVInt(0)
-        stream.writeVInt(0)
 
-        // VIntArr 2
-        stream.writeVInt(29)
-        stream.writeVInt(-29)
-        stream.writeVInt(-24)
-        stream.writeVInt(-14)
-        stream.writeVInt(-17)
-        stream.writeVInt(-18)
-        stream.writeVInt(-17)
-        stream.writeVInt(-13)
-        stream.writeVInt(45)
-        stream.writeVInt(-13)
-        stream.writeVInt(-16)
-        stream.writeVInt(-27)
-        stream.writeVInt(-29)
-        stream.writeVInt(-23)
-        stream.writeVInt(-31)
-        stream.writeVInt(-20)
-        stream.writeVInt(45)
-        stream.writeVInt(-17)
-        stream.writeVInt(-26)
-        stream.writeVInt(-26)
-        stream.writeVInt(-27)
-        stream.writeVInt(-14)
-        stream.writeVInt(45)
-        stream.writeVInt(-30)
-        stream.writeVInt(-17)
-        stream.writeVInt(-17)
-        stream.writeVInt(-13)
-        stream.writeVInt(-12)
-        stream.writeVInt(45)
-        stream.writeVInt(52)
-
-        // VIntArr 3
+        // VintArr 1
         stream.writeVInt(61)
-        stream.writeVInt(7003020)
-        stream.writeVInt(7003010)
-        stream.writeVInt(7003010)
-        stream.writeVInt(7003010)
-        stream.writeVInt(7003010)
-        stream.writeVInt(7003010)
-        stream.writeVInt(7003010)
-        stream.writeVInt(7003010)
-        stream.writeVInt(7003010)
-        stream.writeVInt(7003010)
-        stream.writeVInt(7003010)
+        stream.writeVInt(7019005)
+        stream.writeVInt(7001001)
+        stream.writeVInt(7019002)
+        stream.writeVInt(7019003)
+        stream.writeVInt(7019003)
+        stream.writeVInt(7019005)
+        stream.writeVInt(7019005)
+        stream.writeVInt(7019007)
+        stream.writeVInt(7019007)
+        stream.writeVInt(7019007)
+        stream.writeVInt(7019010)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
-        stream.writeVInt(7003015)
+        stream.writeVInt(7019015)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
-        stream.writeVInt(7003020)
-        stream.writeVInt(-1)
-        stream.writeVInt(-1)
-        stream.writeVInt(-1)
-        stream.writeVInt(-1)
-        stream.writeVInt(-1)
+        stream.writeVInt(7019020)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
@@ -136,7 +89,12 @@ export class LogicShop {
         stream.writeVInt(-1)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
-        stream.writeVInt(7003050)
+        stream.writeVInt(-1)
+        stream.writeVInt(-1)
+        stream.writeVInt(-1)
+        stream.writeVInt(-1)
+        stream.writeVInt(-1)
+        stream.writeVInt(7019050)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
@@ -146,26 +104,35 @@ export class LogicShop {
         stream.writeVInt(-1)
         stream.writeVInt(-1)
         stream.writeVInt(-1)
-        stream.writeVInt(7003060)
+        stream.writeVInt(7019060)
 
-        // VIntArr 3
+
         stream.writeVInt(7)
         stream.writeVInt(50)
-        stream.writeVInt(7)
-        stream.writeVInt(1)
-        stream.writeVInt(1)
-        stream.writeVInt(0)
-        stream.writeVInt(0)
-        stream.writeVInt(0)
-
-        // VIntArr 4
-        stream.writeVInt(0)
-
-        stream.writeVInt(1780697181)
-        stream.writeVInt(1780697470)
-        stream.writeVInt(1780696782)
+        stream.writeBoolean(true)
+        stream.writeBoolean(true)
+        stream.writeBoolean(true)
         stream.writeBoolean(false)
-        stream.writeVInt(3085)
+        stream.writeVInt(1)
+        stream.writeVInt(1)
+        // VintArr 2
+        stream.writeVInt(0)
+
+        // VintArr 3
+        stream.writeVInt(0)
+
+        // VintArr 4
+        stream.writeVInt(0)
+
+        // VintArr 5
+        stream.writeVInt(0)
+
+
+        stream.writeVInt(1787253659)
+        stream.writeVInt(1787253919)
+        stream.writeVInt(1787253573)
+        stream.writeBoolean(false)
+        stream.writeVInt(3160)
         stream.writeVInt(0)
         stream.writeVInt(-1)
         stream.writeVInt(0)
@@ -174,73 +141,67 @@ export class LogicShop {
         stream.writeVInt(0)
         stream.writeVInt(0)
 
-        // LogicShopCycleManager::encode
-
-        // LogicShopCycleItems 1
+        // LogicShopCycleManager
         stream.writeVInt(3)
         stream.writeVInt(5)
-
         // LogicShopCycleItem
         stream.writeVInt(0)
         stream.writeVInt(0)
-        stream.writeVInt(3085)
+        stream.writeVInt(3160)
         stream.writeVInt(0)
         stream.writeVInt(0)
-        stream.writeVInt(1)
+        stream.writeVInt(2)
         stream.writeBoolean(true)
-        stream.writeBoolean(true)
-
+        stream.writeBoolean(false)
         // Gems
         stream.writeVInt(5)
-        stream.writeVInt(1)
 
+        stream.writeVInt(1)
         // LogicShopCycleItem
         stream.writeVInt(0)
         stream.writeVInt(1)
-        stream.writeVInt(3085)
-        stream.writeVInt(100)
+        stream.writeVInt(3160)
+        stream.writeVInt(50)
         stream.writeVInt(0)
         stream.writeVInt(1)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
-
         // Spell
         stream.writeVInt(-1562196636)
-        stream.writeVInt(10)
+        stream.writeVInt(5)
         stream.writeVInt(0)
         stream.writeBoolean(false)
         stream.writeVInt(4000)
         stream.writeVInt(0)
-        stream.writeVInt(1)
 
+        stream.writeVInt(1)
         // LogicShopCycleItem
         stream.writeVInt(0)
         stream.writeVInt(2)
-        stream.writeVInt(3085)
-        stream.writeVInt(100)
+        stream.writeVInt(3160)
+        stream.writeVInt(250)
         stream.writeVInt(0)
         stream.writeVInt(1)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
-
         // Spell
         stream.writeVInt(-1276240925)
+        stream.writeVInt(5)
         stream.writeVInt(2)
-        stream.writeVInt(1)
         stream.writeBoolean(false)
         stream.writeVInt(4000)
         stream.writeVInt(0)
 
-        // LogicShopCycleManager::encode::boolArr 1
+
+        // BoolArr 1
         stream.writeVInt(3)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
 
-        // LogicShopCycleItems 2
+
         stream.writeVInt(6)
         stream.writeVInt(7)
-
         // LogicShopCycleItem
         stream.writeVInt(0)
         stream.writeVInt(0)
@@ -250,11 +211,10 @@ export class LogicShop {
         stream.writeVInt(1)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
-
         // Emoji
-        stream.writeVInt(54)
-        stream.writeVInt(7)
+        stream.writeVInt(22)
 
+        stream.writeVInt(7)
         // LogicShopCycleItem
         stream.writeVInt(0)
         stream.writeVInt(1)
@@ -264,11 +224,10 @@ export class LogicShop {
         stream.writeVInt(1)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
-
         // Emoji
-        stream.writeVInt(221)
-        stream.writeVInt(7)
+        stream.writeVInt(207)
 
+        stream.writeVInt(7)
         // LogicShopCycleItem
         stream.writeVInt(0)
         stream.writeVInt(2)
@@ -278,11 +237,10 @@ export class LogicShop {
         stream.writeVInt(1)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
-
         // Emoji
-        stream.writeVInt(62)
-        stream.writeVInt(7)
+        stream.writeVInt(138)
 
+        stream.writeVInt(7)
         // LogicShopCycleItem
         stream.writeVInt(0)
         stream.writeVInt(3)
@@ -292,11 +250,10 @@ export class LogicShop {
         stream.writeVInt(1)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
-
         // Emoji
-        stream.writeVInt(273)
-        stream.writeVInt(7)
+        stream.writeVInt(55)
 
+        stream.writeVInt(7)
         // LogicShopCycleItem
         stream.writeVInt(0)
         stream.writeVInt(4)
@@ -306,11 +263,10 @@ export class LogicShop {
         stream.writeVInt(1)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
-
         // Emoji
-        stream.writeVInt(150)
-        stream.writeVInt(7)
+        stream.writeVInt(142)
 
+        stream.writeVInt(7)
         // LogicShopCycleItem
         stream.writeVInt(0)
         stream.writeVInt(5)
@@ -320,11 +276,10 @@ export class LogicShop {
         stream.writeVInt(1)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
-
         // Emoji
-        stream.writeVInt(40)
+        stream.writeVInt(249)
 
-        // LogicShopCycleManager::encode::boolArr 2
+        // BoolArr 2
         stream.writeVInt(6)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
@@ -332,12 +287,12 @@ export class LogicShop {
         stream.writeBoolean(false)
         stream.writeBoolean(false)
         stream.writeBoolean(false)
-        stream.writeVInt(0)
 
-        // LogicShopCycleManager::encode END
 
-        // VIntArr 5
         stream.writeVInt(0)
+        // VintArr (Purchased battlepasses)
+        stream.writeVInt(1)
+        stream.writeVInt(70001)
 
         stream.writeVInt(-1)
     }

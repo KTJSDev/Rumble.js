@@ -1,3 +1,5 @@
+import { LogicLong } from "../logic/LogicLong.js"
+
 export class ByteStream {
   constructor (data) {
     // eslint-disable-next-line new-cap
@@ -251,6 +253,7 @@ export class ByteStream {
    * @param {String} value Your value to write.
    */
   writeStringReference(value) {
+    this.bitOffset = 0
     const bytes = value != null
         ? Buffer.from(value, "utf8")
         : Buffer.alloc(0)
@@ -298,7 +301,12 @@ export class ByteStream {
    * @returns { Array<Number> } LogicLong VarInts
    */
   readLogicLong () {
-    return [ this.readVInt(), this.readVInt() ]
+    const logicLong = new LogicLong()
+
+    logicLong.high = this.readVInt()
+    logicLong.low = this.readVInt()
+
+    return logicLong
   }
 
   /**
@@ -346,6 +354,20 @@ export class ByteStream {
     }
 
     this.writeInt(-1)
+  }
+
+  readBytes() {
+    this.bitOffset = 0
+    const length = this.readInt()
+
+    if (length === -1)
+      return Buffer.alloc(0)
+
+    const bytes = this.buffer.slice(this.offset, this.offset + length)
+
+    this.offset += length
+
+    return bytes
   }
 
   /**

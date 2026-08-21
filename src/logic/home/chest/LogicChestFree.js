@@ -4,9 +4,7 @@ export class LogicChestFree {
         // LogicTimer
         stream.writeVInt(288000)
         stream.writeVInt(288000)
-        stream.writeVInt(1780711870)
-
-        // LogicChest
+        stream.writeVInt(1787268319)
         stream.writeBoolean(true)
         // LogicChest
         stream.writeVInt(2)

@@ -1,16 +1,16 @@
 export class LogicDonationManager {
     static encode(stream) {
         // LogicTimer
-        stream.writeVInt(861420)
-        stream.writeVInt(864000)
-        stream.writeVInt(1780740541)
+        stream.writeVInt(0)
+        stream.writeVInt(0)
+        stream.writeVInt(-1)
         // LogicTimer
-        stream.writeVInt(373580)
-        stream.writeVInt(431580)
-        stream.writeVInt(1780716149)
+        stream.writeVInt(425080)
+        stream.writeVInt(431280)
+        stream.writeVInt(1787275173)
         // LogicTimer
-        stream.writeVInt(428520)
-        stream.writeVInt(432000)
-        stream.writeVInt(1780718896)
+        stream.writeVInt(0)
+        stream.writeVInt(0)
+        stream.writeVInt(-1)
     }
 }

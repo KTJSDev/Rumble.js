@@ -22,6 +22,8 @@ import { LogicCupManager } from "../../home/cup/LogicCupManager.js";
 import { LogicCampaignDonationManager } from "../../home/donation/LogicCampaignDonationManager.js";
 import { LogicAdvertisementLogger } from "../../home/ads/LogicAdvertisementLogger.js";
 import { Logic2V2EventManager } from "../../home/events/Logic2V2EventManager.js";
+import { LogicWelcomeBack } from "../../home/data/LogicWelcomeBack.js";
+import { LogicStreak } from "../../home/data/LogicStreak.js";
 
 export class OwnHomeDataMessage extends PiranhaMessage {
     static KEY_VALUES = 7
@@ -49,7 +51,7 @@ export class OwnHomeDataMessage extends PiranhaMessage {
         this.stream.writeVInt(0)
         this.stream.writeVInt(0)
         this.stream.writeVInt(-1)
-        this.stream.writeInt(1780697470)
+        this.stream.writeInt(Math.floor(Date.now() / 1000)) // date
         this.stream.writeVInt(0)
 
         // spells (LogicSpellStat[])
@@ -58,16 +60,16 @@ export class OwnHomeDataMessage extends PiranhaMessage {
         LogicEventManager.encode(this.stream)
         LogicLiveGlobalManager.encode(this.stream)
         LogicRewardManager.encode(this.stream)
-
         LogicCreatorSupport.encode(this.stream)
-
+        LogicWelcomeBack.encode(this.stream)
+        LogicStreak.encode(this.stream)
 
         this.stream.writeVInt(-1)
         // LogicHome end
 
         this.stream.writeLong(0, 1)
         this.stream.writeVInt(0)
-        this.stream.writeVInt(20240)
+        this.stream.writeVInt(65806)
         this.stream.writeInt(1)
         this.stream.writeVInt(0)
 
@@ -75,13 +77,13 @@ export class OwnHomeDataMessage extends PiranhaMessage {
         // deck related?
         this.stream.writeVInt(5)
 
-        this.stream.writeVInt(8) // always 8 tho
+        this.stream.writeVInt(8)
         this.stream.writeVInt(-1562196636)
         this.stream.writeVInt(349985024)
         this.stream.writeVInt(-1276240925)
         this.stream.writeVInt(-727667870)
         this.stream.writeVInt(-1042652371)
-        this.stream.writeVInt(-1644110241)
+        this.stream.writeVInt(1991136730)
         this.stream.writeVInt(-1656566864)
         this.stream.writeVInt(429124811)
 
@@ -130,7 +132,6 @@ export class OwnHomeDataMessage extends PiranhaMessage {
         LogicAchievements.encode(this.stream)
         LogicShop.encode(this.stream)
 
-
         LogicSpellDeck.encode(this.stream)
         LogicSpellDeck.encode2(this.stream)
         LogicSpellCollection.encode(this.stream)
@@ -154,12 +155,23 @@ export class OwnHomeDataMessage extends PiranhaMessage {
         this.stream.writeVInt(0)
         this.stream.writeVInt(0)
 
+        // Battlepass Bitlist (similar to laser one, but rumble uses one bitlist for free and paid rewards)
+        this.stream.writeVInt(8)
+        this.stream.writeVInt(0xFFFFFFFF)
+        this.stream.writeVInt(0xFFFFFFFF)
+        this.stream.writeVInt(0xFFFFFFFF)
+        this.stream.writeVInt(0xFFFFFFFF)
+        this.stream.writeVInt(0xFFFFFFFF)
+        this.stream.writeVInt(0xFFFFFFFF)
+        this.stream.writeVInt(0xFFFFFFFF)
+        this.stream.writeVInt(0xFFFFFFFF)
+
         this.stream.writeVInt(0)
         this.stream.writeVInt(0)
-        this.stream.writeVInt(91)
+        this.stream.writeVInt(15)
         this.stream.writeVInt(0)
         this.stream.writeBoolean(false)
-        this.stream.writeInt(3)
+        this.stream.writeInt(2)
         this.stream.writeStringReference('')
         this.stream.writeStringReference('')
         this.stream.writeBoolean(false)

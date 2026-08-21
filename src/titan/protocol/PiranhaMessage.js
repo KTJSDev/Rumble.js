@@ -6,7 +6,7 @@ export class PiranhaMessage {
     }
 
     encode() { this.stream.writeBoolean(true) }
-    decode() {}
+    decode() { this.stream.readBoolean() }
 
     getMessageType() {
         return 0
